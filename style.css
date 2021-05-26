@@ -1,0 +1,8 @@
+body {
+    background: #212529;
+    color: #FFFFFF;
+    text-align: center;
+}
+header {
+    z-index: 10;
+}
