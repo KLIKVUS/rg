@@ -17,6 +17,7 @@
     <!--{ Css and Js }-->
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="scripts\cards.js"></script>
 </head>
 <body>
     <header class="position-sticky top-0 mb-4">
@@ -59,11 +60,9 @@
                     </ul>
 
                     <!--{ Поиск }-->
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-
-
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    <form action="" class="d-flex" id="Search">
+                        <input class="form-control me-2" type="search" name="search" placeholder="Поиск" maxlength="20">
+                        <button class="btn btn-outline-success">Найти</button>
                     </form>
                 </div>
             </div>
@@ -72,7 +71,7 @@
 
 
     <main>
-        <!--{ Карусель с нашими игрульками }-->
+        <!--{ Карусель }-->
         <div class="container mb-5">
             <h1>Ту это да</h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -109,37 +108,19 @@
                 </button>
             </div>
         </div>
-        
 
-        <!--{ Карточки с играми }-->
         <div class="container">
-            <div class="card text-white bg-dark border-secondary mb-3">
-                <img src="images/test.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-
-            <div class="card text-white bg-dark border-secondary mb-3">
-                <img src="images/test.png" class="card-img-bottom" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-
-            <div class="card text-white bg-dark border-secondary mb-3">
-                <img src="images/test.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet provident, rem totam quis quisquam at tempora error eos nihil beatae, molestias perferendis consequuntur non dolorem alias. Qui mollitia accusantium porro reiciendis, quas nobis necessitatibus perspiciatis maxime sit numquam aliquam dicta voluptatum sunt, tenetur cumque culpa. Libero distinctio est officiis esse.</p>
+                <p>Ex impedit voluptatum qui harum repudiandae repellat alias dignissimos, corrupti voluptate rerum enim placeat unde rem sit aut in mollitia molestias libero ducimus blanditiis. Quas perferendis nihil, adipisci labore nam a. Sunt, debitis. Maxime debitis laudantium mollitia obcaecati, nesciunt itaque nihil maiores numquam porro beatae velit corrupti aspernatur illum iusto.</p>
+                <p>Maiores quia libero quod repellendus dolorum expedita laborum quas animi nostrum saepe nobis, accusamus impedit quisquam nemo dolore, ea ducimus repudiandae. Enim iure facilis doloremque, obcaecati perspiciatis id consectetur saepe expedita, laudantium ut commodi dolore vel eum beatae odio numquam. Ipsa eum tempore ipsum hic facilis placeat eveniet sint laborum.</p>
+                <p>Ullam error ipsum quasi ad adipisci veniam ut aliquid minima beatae. Fuga labore blanditiis deleniti accusantium libero pariatur praesentium dolores exercitationem eius amet ex iusto quia, nobis ut porro consequuntur optio reiciendis commodi quibusdam veniam quos sed? Officia odit adipisci autem est sapiente tenetur, hic impedit iste laborum voluptates eligendi!</p>
+                <p>Eos tenetur natus laboriosam, animi magni, ducimus blanditiis similique assumenda alias incidunt placeat illo maiores nam enim voluptas minima, fugiat rem consequatur iste? Corrupti ab, nulla pariatur numquam impedit, non reprehenderit perferendis, cum minima corporis reiciendis dolores id beatae quas accusamus unde maiores! Excepturi distinctio velit, quisquam recusandae vero ipsa.</p>
             </div>
         </div>
+
+        <!--{ Карточки с играми }-->
+        <div class="container" id="GameCardList"></div>
     </main>
 </body>
 </html>
