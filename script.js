@@ -2,9 +2,9 @@ window.addEventListener("load", () => {
     const GameCardList = document.querySelector("#GameCardList");
 
     // Добавление карт
-    const getRandomNum = (min, max) => {
-        return Math.floor(Math.random() * (max - min)) + min;
-    }
+    // const getRandomNum = (min, max) => {
+    //     return Math.floor(Math.random() * (max - min)) + min;
+    // }
 
     var NumberOfShownCards = 0;
     var GenerateCrads = true;
@@ -47,8 +47,14 @@ window.addEventListener("load", () => {
             if (exp.test(el)) return el;
         })
         
-        ScrollCardLoad(newArr);
+        if (PageCard[newArr] !== undefined) {
+            ScrollCardLoad(newArr);
+        } else if (PageCard[newArr] === undefined) {
+            GenerateCrads = false;
+            GameCardList.innerHTML = SearchError[0];
+        }
     }
 
     Search.addEventListener("submit", SearchGame);
+    Search.addEventListener("search", () => {GameCardList.innerHTML = PageCard; console.log(PageCard);})
 })
