@@ -1,8 +1,39 @@
 body {
     background: #212529;
-    color: #FFFFFF;
+    color: #E9DBD8;
     text-align: center;
 }
 header {
     z-index: 10;
+}
+a {
+    text-decoration: none;
+}
+
+
+header .show .navbar-nav {
+    margin: 1vh 0;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header .nav-link {
+    margin: 0 0.1vw;
+    padding: 0.5vh 1vw !important;
+    color: #558C8C !important;
+    border-radius: 0.5rem;
+    background-color: #558c8c00;
+    transition: background-color 0.3s, color 0.3s;
+}
+header .nav-link:hover {
+    color: #fff !important;
+    font-weight: 400;
+    border-radius: 0.5rem;
+    background-color: #558c8caf;
+}
+header .nav-link.active {
+    color: #fff !important;
+    font-weight: 400;
+    border-radius: 0.5rem;
+    background-color: #558c8caf;
 }
