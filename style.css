@@ -1,6 +1,6 @@
 body {
     background: #212529;
-    color: #E9DBD8;
+    color: #fff;
     text-align: center;
 }
 header {
@@ -36,4 +36,8 @@ header .nav-link.active {
     font-weight: 400;
     border-radius: 0.5rem;
     background-color: #558c8caf;
+}
+
+main .ap {
+    font-size: 1.5vh;
 }

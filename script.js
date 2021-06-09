@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
 
     // Рандомное значение карты
     const getRandomNum = (min, max) => {
-        return Math.floor(Math.random() * (max - min)) + min;
+        return Math.floor(Math.random() * (max - min));
     }
 
     var NumberOfShownCards = 0;
@@ -17,7 +17,6 @@ window.addEventListener("load", () => {
         GenerateCrads = false;
         CardLoading = false;
         MainInfo = document.querySelector("#info");
-        // return
     } else {
         MainInfo = document.querySelector("#infos");
     }
@@ -46,8 +45,7 @@ window.addEventListener("load", () => {
             var windowPosBottom = document.documentElement.getBoundingClientRect().bottom;
             if (windowPosBottom > document.documentElement.clientHeight + 100) break;
     
-            GameCardList.innerHTML += PageCard[GamesNames[getRandomNum(0, GamesNames.length)]];
-            GameCardList.innerHTML += PageCard[GamesNames[getRandomNum(0, GamesNames.length)]];
+            GameCardList.innerHTML += PageCard[GamesNames[getRandomNum(0, GamesNames.length)]] + PageCard[GamesNames[getRandomNum(0, GamesNames.length)]];
         }
     }
     window.addEventListener("scroll", ScrollCardLoad);
@@ -69,7 +67,11 @@ window.addEventListener("load", () => {
             ScrollCardLoad(newArr);
         } else {
             GenerateCrads = false;
-            GameCardList.innerHTML = SearchError[0];
+            MainInfo.style = [
+                "display: none;"
+            ];
+            GameCardList.innerHTML = null;
+            MainInfo.nextElementSibling.innerHTML = SearchError[0];
         }
     }
 
@@ -78,8 +80,9 @@ window.addEventListener("load", () => {
         MainInfo.style = [
             "display: block;"
         ];
+        MainInfo.nextElementSibling.innerHTML = null;
         NumberOfShownCards = 0;
-        if (CardLoading == false) { GenerateCrads = true; }
+        if (CardLoading == false) { GenerateCrads = false; }
         GameCardList.innerHTML = null;
         ScrollCardLoad();
     })
